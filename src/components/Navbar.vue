@@ -1,0 +1,274 @@
+<template>
+  <div class="navbar">
+    <p class="logo">
+      <a href="#" @click.prevent="changePage('homepage')"
+        ><img src="../assets/images/Logo_v1.svg" alt="logo"
+      /></a>
+    </p>
+    <div class="navmenu">
+      <ul class="navmenu__desktop">
+        <li @click="changePage('projects')">Projects</li>
+        <li>
+          <a href="https://www.instagram.com/filip.jpeg/" target="_blank"
+            >Instagram</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://www.linkedin.com/in/filip-milovanovic-b8272a218/"
+            target="_blank"
+            >LinkedIn</a
+          >
+        </li>
+        <li @click="changePage('about')">About</li>
+      </ul>
+      <div class="navmenu__mobile">
+        <a
+          href="#"
+          class="button-mobile"
+          :class="{ active: isOpen }"
+          @click="openMobileMenu"
+          ><span></span
+        ></a>
+        <div class="navmenu__mobile__list" :class="{ opened: isOpen }">
+          <ul>
+            <li class="mobile-item" :class="{ 'opened-list': isOpen }">
+              <a href="#" @click="changePage('projects')">Projects</a>
+            </li>
+            <li class="mobile-item" :class="{ 'opened-list': isOpen }">
+              <a href="https://www.instagram.com/filip.jpeg/" target="_blank"
+                >Instagram</a
+              >
+            </li>
+            <li class="mobile-item" :class="{ 'opened-list': isOpen }">
+              <a
+                href="https://www.linkedin.com/in/filip-milovanovic-b8272a218/"
+                target="_blank"
+                >LinkedIn</a
+              >
+            </li>
+            <li class="mobile-item" :class="{ 'opened-list': isOpen }">
+              <a href="#" @click="changePage('about')">About</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script>
+export default {
+  data() {
+    return {
+      isOpen: false,
+      isActiveClass: false,
+    };
+  },
+
+  methods: {
+    openMobileMenu() {
+      this.isOpen = !this.isOpen;
+    },
+    changePage(page) {
+      this.$emit('pageSwitched', page);
+    },
+  },
+};
+</script>
+
+<style lang="scss" scoped>
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4rem 15rem;
+  color: #fff;
+
+  .logo {
+    width: 8rem;
+    img {
+      width: 100%;
+    }
+  }
+  .navmenu {
+    width: 25%;
+    &__desktop {
+      display: flex;
+      justify-content: space-between;
+
+      li,
+      a {
+        font-size: 1.8rem;
+        color: #fff;
+      }
+
+      a,
+      li {
+        text-decoration: none;
+        transition: 0.2s ease-in-out;
+        cursor: pointer;
+
+        &:hover {
+          color: #000;
+        }
+      }
+    }
+
+    &__mobile {
+      .navmenu__mobile__list {
+        position: fixed;
+        inset: 0 0 0 0;
+        z-index: 2;
+        background-color: #fff;
+        transition: all 0.2s ease-in-out;
+        transform: translate(100%);
+
+        ul {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-end;
+          transform: translateY(50%);
+          padding-right: 2rem;
+        }
+
+        li {
+          padding-bottom: 5rem;
+        }
+
+        .mobile-item:nth-child(1) {
+          transform: translateX(100rem);
+          transition: all 0.3s ease-in-out;
+        }
+        .mobile-item:nth-child(2) {
+          transform: translateX(100rem);
+          transition: all 0.5s ease-in-out;
+        }
+        .mobile-item:nth-child(3) {
+          transform: translateX(100rem);
+          transition: all 0.7s ease-in-out;
+        }
+        .mobile-item:nth-child(4) {
+          transform: translateX(100rem);
+          transition: all 0.9s ease-in-out;
+        }
+
+        .opened-list {
+          transform: translateX(-5rem) !important;
+        }
+      }
+      a {
+        font-size: 4rem;
+        text-decoration: none;
+        color: #2a4b49;
+      }
+
+      .button-mobile {
+        position: absolute;
+        top: 5%;
+        right: 5%;
+        z-index: 3;
+        cursor: pointer;
+
+        span {
+          position: relative;
+          display: block;
+          width: 30px;
+          height: 2px;
+          background: #fff;
+          transition: all 0.2s ease-in-out;
+
+          &:before,
+          &:after {
+            position: absolute;
+            background: #fff;
+            content: '';
+            width: 25px;
+            height: 2px;
+            transition: all 0.2s ease-in-out;
+          }
+
+          &:before {
+            top: -8px;
+          }
+
+          &:after {
+            top: 8px;
+          }
+        }
+      }
+    }
+
+    .active {
+      span {
+        &:before {
+          transform: rotate(45deg) translate(5px, 6px);
+          background: #2a4b49;
+        }
+
+        &:after {
+          transform: rotate(-45deg) translate(5px, -6px);
+          background: #2a4b49;
+        }
+      }
+    }
+
+    .opened {
+      transform: translate(0);
+    }
+  }
+}
+
+@media only screen and (max-width: 1500px) {
+  .navbar {
+    padding: 0 10rem;
+
+    .navmenu {
+      width: 35%;
+    }
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .navbar {
+    padding: 0 10rem;
+
+    .navmenu {
+      width: 45%;
+    }
+  }
+}
+
+@media only screen and (max-width: 850px) {
+  .navbar {
+    padding: 0 5rem;
+    overflow: hidden;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  .navbar {
+    .navmenu {
+      .navmenu__desktop {
+        display: none;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 750px) {
+  .navbar {
+    .navmenu {
+      .navmenu__mobile {
+        display: none;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .navbar {
+    padding: 0 2rem;
+  }
+}
+</style>
