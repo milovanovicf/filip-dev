@@ -1,5 +1,5 @@
 <template>
-  <div class="bg">
+  <div class="bg" :class="{ whenProjects: currentPage === 'projects' }">
     <Navbar @page-switched="pageSwitch" />
     <Homepage v-if="currentPage === 'homepage'" />
     <Projects v-if="currentPage === 'projects'" />
@@ -35,11 +35,6 @@ export default {
 };
 </script>
 <style>
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
-
 @font-face {
   font-family: 'Ambit';
   src: url('src/assets/fonts/ambit-cufonfonts/Ambit.otf');
@@ -184,9 +179,15 @@ table {
   overflow: hidden;
 }
 
+.whenProjects {
+  overflow: visible;
+  background: #1f3d3c;
+  height: auto;
+}
+
 @media only screen and (min-width: 2560px) {
   html {
-    font-size: 12px;
+    font-size: 14px;
   }
 }
 
@@ -196,6 +197,12 @@ table {
     height: 40vh;
     background-size: 150%;
     background-position: center bottom;
+  }
+
+  .whenProjects {
+    overflow: visible;
+    background: #1f3d3c;
+    height: auto;
   }
 }
 </style>
