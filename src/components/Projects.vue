@@ -28,36 +28,54 @@ export default {
           name: 'Chatter',
           description:
             'Dating app that provides new and exciting ways to find your significant other.',
-          thumbnail: '/src/assets/images/chatter/Preview.png',
+          thumbnail: new URL(
+            `/src/assets/images/chatter/Preview.png`,
+            import.meta.url
+          ),
           client: 'Personal',
           technologies: 'Figma',
           content: {
-            mainImage: '/src/assets/images/chatter/MainImage.png',
-            secondary1: 'src/assets/images/chatter/Secondary1.png',
-            secondary2: 'src/assets/images/chatter/Secondary2.png',
-            secondary3: 'src/assets/images/chatter/Secondary3.png',
-            secondary4: 'src/assets/images/chatter/Secondary4.png',
+            mainImage: new URL(
+              `/src/assets/images/chatter/MainImage.png`,
+              import.meta.url
+            ),
+            secondary1: new URL(
+              `/src/assets/images/chatter/Secondary1.png`,
+              import.meta.url
+            ),
+            secondary2: new URL(
+              `/src/assets/images/chatter/Secondary2.png`,
+              import.meta.url
+            ),
+            secondary3: new URL(
+              `/src/assets/images/chatter/Secondary2.png`,
+              import.meta.url
+            ),
+            secondary4: new URL(
+              `/src/assets/images/chatter/Secondary4.png`,
+              import.meta.url
+            ),
           },
         },
         {
           id: 2,
           name: 'Project2',
-          thumbnail: 'src/assets/images/chatter/Preview.png',
+          thumbnail: 'chatter/Preview.png',
         },
         {
           id: 3,
           name: 'Project3',
-          thumbnail: 'src/assets/images/chatter/Preview.png',
+          thumbnail: 'chatter/Preview.png',
         },
         {
           id: 4,
           name: 'Project4',
-          thumbnail: 'src/assets/images/chatter/Preview.png',
+          thumbnail: 'chatter/Preview.png',
         },
         {
           id: 5,
           name: 'Project5',
-          thumbnail: 'src/assets/images/chatter/Preview.png',
+          thumbnail: 'chatter/Preview.png',
         },
       ],
       currentProject: '',

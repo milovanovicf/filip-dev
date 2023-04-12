@@ -36,13 +36,8 @@ export default {
 </script>
 <style>
 @font-face {
-  font-family: 'Ambit';
-  src: url('src/assets/fonts/ambit-cufonfonts/Ambit.otf');
-}
-
-@font-face {
   font-family: 'Syne';
-  src: url('src/assets/fonts/Syne-Regular.ttf');
+  src: url('@/assets/fonts/Syne-Regular.ttf');
 }
 
 html,
