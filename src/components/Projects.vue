@@ -48,7 +48,7 @@ export default {
               import.meta.url
             ),
             secondary3: new URL(
-              `/src/assets/images/chatter/Secondary2.png`,
+              `/src/assets/images/chatter/Secondary3.png`,
               import.meta.url
             ),
             secondary4: new URL(

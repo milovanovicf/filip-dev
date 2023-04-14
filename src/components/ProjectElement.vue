@@ -13,6 +13,14 @@ export default {
 
 <style lang="scss" scoped>
 .project {
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: 0.2s ease-in-out;
+
+  &:hover {
+    border: 1px solid #fff;
+  }
+
   img {
     width: 100%;
     height: 100%;

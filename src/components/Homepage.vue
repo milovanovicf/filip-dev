@@ -163,12 +163,12 @@
   }
 }
 
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 1400px) {
   .homepage {
     .button {
-      font-size: 1.5rem;
+      font-size: 1.7rem;
       transform: translateY(-5rem);
-      margin: 5rem 0;
+      margin: 3rem 0;
     }
 
     .button-first-text,

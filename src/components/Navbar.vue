@@ -33,22 +33,40 @@
         <div class="navmenu__mobile__list" :class="{ opened: isOpen }">
           <ul>
             <li class="mobile-item" :class="{ 'opened-list': isOpen }">
-              <a href="#" @click="changePage('projects')">Projects</a>
+              <a
+                href="#"
+                @click="
+                  changePage('projects');
+                  openMobileMenu();
+                "
+                >Projects</a
+              >
             </li>
             <li class="mobile-item" :class="{ 'opened-list': isOpen }">
-              <a href="https://www.instagram.com/filip.jpeg/" target="_blank"
+              <a
+                @click="openMobileMenu"
+                href="https://www.instagram.com/filip.jpeg/"
+                target="_blank"
                 >Instagram</a
               >
             </li>
             <li class="mobile-item" :class="{ 'opened-list': isOpen }">
               <a
+                @click="openMobileMenu"
                 href="https://www.linkedin.com/in/filip-milovanovic-b8272a218/"
                 target="_blank"
                 >LinkedIn</a
               >
             </li>
             <li class="mobile-item" :class="{ 'opened-list': isOpen }">
-              <a href="#" @click="changePage('about')">About</a>
+              <a
+                href="#"
+                @click="
+                  changePage('about');
+                  openMobileMenu();
+                "
+                >About</a
+              >
             </li>
           </ul>
         </div>

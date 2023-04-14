@@ -23,14 +23,14 @@
     </div>
     <div class="secondary-images">
       <div class="row1">
-        <img :src="project.content.secondary4" alt="secondary1" />
+        <img :src="project.content.secondary1" alt="secondary1" />
       </div>
       <div class="row2">
-        <img :src="project.content.secondary2" alt="secondary1" />
-        <img :src="project.content.secondary3" alt="secondary2" />
+        <img :src="project.content.secondary2" alt="secondary2" />
+        <img :src="project.content.secondary3" alt="secondary3" />
       </div>
       <div class="row3">
-        <img :src="project.content.secondary1" alt="" />
+        <img :src="project.content.secondary4" alt="secondary4" />
       </div>
     </div>
 
