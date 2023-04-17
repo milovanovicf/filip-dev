@@ -1,29 +1,39 @@
 <template>
   <div class="project">
-    <img :src="projectContent.thumbnail" alt="" />
-    <h3>{{ projectContent.name }}</h3>
+    <router-link :to="projectLink">
+      <img :src="projectContent.thumbnail" alt="project" />
+      <h3>{{ projectContent.name }}</h3>
+    </router-link>
   </div>
 </template>
 
 <script>
 export default {
   props: ['projectContent'],
+  computed: {
+    projectLink() {
+      return {
+        name: 'project',
+        params: {
+          projectId: this.projectContent.id,
+        },
+      };
+    },
+  },
 };
 </script>
 
 <style lang="scss" scoped>
 .project {
   cursor: pointer;
-  border: 1px solid transparent;
-  transition: 0.2s ease-in-out;
-
-  &:hover {
-    border: 1px solid #fff;
-  }
 
   img {
     width: 100%;
     height: 100%;
+  }
+
+  a {
+    text-decoration: none;
   }
 
   h3 {

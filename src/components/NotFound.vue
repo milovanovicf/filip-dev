@@ -1,11 +1,11 @@
 <template>
-  <main class="about">
-    <h1>About</h1>
+  <main class="not-found">
+    <h1>Page not found!</h1>
   </main>
 </template>
 
 <style lang="scss" scoped>
-.about {
+.not-found {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -19,7 +19,7 @@
 }
 
 @media only screen and (max-width: 850px) {
-  .about {
+  .not-found {
     position: absolute;
     display: block;
     margin: 0;

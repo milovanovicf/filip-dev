@@ -176,7 +176,7 @@
       margin: 0;
     }
     .content {
-      padding-right: 0;
+      padding-right: 7rem;
     }
   }
 }
@@ -219,6 +219,10 @@
     .button {
       padding: 3rem 0;
       font-size: 2rem;
+    }
+
+    .content {
+      padding-right: 0;
     }
 
     .content,

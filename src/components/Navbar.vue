@@ -1,13 +1,13 @@
 <template>
   <div class="navbar">
     <p class="logo">
-      <a href="#" @click.prevent="changePage('homepage')"
+      <router-link to="/"
         ><img src="../assets/images/Logo_v1.svg" alt="logo"
-      /></a>
+      /></router-link>
     </p>
     <div class="navmenu">
       <ul class="navmenu__desktop">
-        <li @click="changePage('projects')">Projects</li>
+        <li><router-link to="/projects">Projects</router-link></li>
         <li>
           <a href="https://www.instagram.com/filip.jpeg/" target="_blank"
             >Instagram</a
@@ -20,7 +20,7 @@
             >LinkedIn</a
           >
         </li>
-        <li @click="changePage('about')">About</li>
+        <li><router-link to="/about">About</router-link></li>
       </ul>
       <div class="navmenu__mobile">
         <a
@@ -32,15 +32,12 @@
         ></a>
         <div class="navmenu__mobile__list" :class="{ opened: isOpen }">
           <ul>
-            <li class="mobile-item" :class="{ 'opened-list': isOpen }">
-              <a
-                href="#"
-                @click="
-                  changePage('projects');
-                  openMobileMenu();
-                "
-                >Projects</a
-              >
+            <li
+              class="mobile-item"
+              :class="{ 'opened-list': isOpen }"
+              @click="openMobileMenu"
+            >
+              <router-link to="/projects">Projects</router-link>
             </li>
             <li class="mobile-item" :class="{ 'opened-list': isOpen }">
               <a
@@ -58,15 +55,12 @@
                 >LinkedIn</a
               >
             </li>
-            <li class="mobile-item" :class="{ 'opened-list': isOpen }">
-              <a
-                href="#"
-                @click="
-                  changePage('about');
-                  openMobileMenu();
-                "
-                >About</a
-              >
+            <li
+              class="mobile-item"
+              :class="{ 'opened-list': isOpen }"
+              @click="openMobileMenu"
+            >
+              <router-link to="/about">About</router-link>
             </li>
           </ul>
         </div>
@@ -87,9 +81,6 @@ export default {
   methods: {
     openMobileMenu() {
       this.isOpen = !this.isOpen;
-    },
-    changePage(page) {
-      this.$emit('pageSwitched', page);
     },
   },
 };
@@ -119,6 +110,10 @@ export default {
       a {
         font-size: 1.8rem;
         color: #fff;
+      }
+
+      a.router-link-active {
+        text-decoration: underline;
       }
 
       a,

@@ -1,46 +1,71 @@
 <template>
   <div class="project">
     <div class="main-image">
-      <img :src="project.content.mainImage" alt="" />
+      <img :src="selectedProject.content.mainImage" alt="" />
     </div>
-    <h1>{{ project.name }}</h1>
+    <h1>{{ selectedProject.name }}</h1>
     <div class="project-details">
       <p class="title">Project details</p>
       <p class="content">
-        {{ project.description }}
+        {{ selectedProject.description }}
       </p>
     </div>
     <hr class="dash" />
     <div class="details">
       <div class="client">
         <p class="title">clinet</p>
-        <p class="content">{{ project.client }}</p>
+        <p class="content">{{ selectedProject.client }}</p>
       </div>
       <div class="technique">
         <p class="title">technologies</p>
-        <p class="content">{{ project.technologies }}</p>
+        <p class="content">{{ selectedProject.technologies }}</p>
       </div>
     </div>
     <div class="secondary-images">
       <div class="row1">
-        <img :src="project.content.secondary1" alt="secondary1" />
+        <img :src="selectedProject.content.secondary1" alt="secondary1" />
       </div>
       <div class="row2">
-        <img :src="project.content.secondary2" alt="secondary2" />
-        <img :src="project.content.secondary3" alt="secondary3" />
+        <img :src="selectedProject.content.secondary2" alt="secondary2" />
+        <img :src="selectedProject.content.secondary3" alt="secondary3" />
       </div>
       <div class="row3">
-        <img :src="project.content.secondary4" alt="secondary4" />
+        <img :src="selectedProject.content.secondary4" alt="secondary4" />
       </div>
     </div>
-
-    <div class="next-project"></div>
+    <div class="next-project">
+      <router-link :to="`/projects/${selectedProject.id + 1}`"
+        >Next</router-link
+      >
+    </div>
   </div>
 </template>
 
 <script>
 export default {
-  props: ['project'],
+  inject: ['projects'],
+  data() {
+    return {
+      selectedProject: null,
+    };
+  },
+  methods: {
+    findProject(route) {
+      const projectId = route.params.projectId;
+      const foundProject = this.projects.find(
+        (project) => project.id === Number(projectId)
+      );
+      this.selectedProject = foundProject;
+    },
+  },
+  created() {
+    this.findProject(this.$route);
+  },
+  watch: {
+    $route(newRoute) {
+      this.findProject(newRoute);
+    },
+  },
 };
 </script>
 

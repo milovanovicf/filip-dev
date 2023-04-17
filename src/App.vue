@@ -1,36 +1,116 @@
 <template>
-  <div class="bg" :class="{ whenProjects: currentPage === 'projects' }">
-    <Navbar @page-switched="pageSwitch" />
-    <Homepage v-if="currentPage === 'homepage'" />
-    <Projects v-if="currentPage === 'projects'" />
-    <About v-if="currentPage === 'about'" />
+  <div class="bg">
+    <Navbar />
+    <router-view></router-view>
   </div>
 </template>
 <script>
 import Navbar from './components/Navbar.vue';
-import Homepage from './components/Homepage.vue';
-import Projects from './components/Projects.vue';
-import About from './components/About.vue';
 
 export default {
-  components: { Navbar, Homepage, Projects, About },
-  data() {
-    return {
-      currentPage: 'homepage',
-    };
-  },
-  methods: {
-    pageSwitch(page) {
-      if (page === 'projects') {
-        this.currentPage = 'projects';
-      }
-      if (page === 'homepage') {
-        this.currentPage = 'homepage';
-      }
-      if (page === 'about') {
-        this.currentPage = 'about';
+  components: { Navbar },
+  watch: {
+    $route(route) {
+      if (route.path.includes('/projects')) {
+        document.querySelector('.bg').classList.add('whenProjects');
+      } else {
+        document.querySelector('.bg').classList.remove('whenProjects');
       }
     },
+  },
+  data() {
+    return {
+      projects: [
+        {
+          id: 1,
+          name: 'Chatter',
+          description:
+            'Dating app that provides new and exciting ways to find your significant other.',
+          thumbnail: new URL(
+            `/src/assets/images/chatter/Preview.png`,
+            import.meta.url
+          ),
+          client: 'Personal',
+          technologies: 'Figma',
+          content: {
+            mainImage: new URL(
+              `/src/assets/images/chatter/MainImage.png`,
+              import.meta.url
+            ),
+            secondary1: new URL(
+              `/src/assets/images/chatter/Secondary1.png`,
+              import.meta.url
+            ),
+            secondary2: new URL(
+              `/src/assets/images/chatter/Secondary2.png`,
+              import.meta.url
+            ),
+            secondary3: new URL(
+              `/src/assets/images/chatter/Secondary3.png`,
+              import.meta.url
+            ),
+            secondary4: new URL(
+              `/src/assets/images/chatter/Secondary4.png`,
+              import.meta.url
+            ),
+          },
+        },
+        {
+          id: 2,
+          name: 'Nesto',
+          description:
+            'Dating app that provides new and exciting ways to find your significant other.',
+          thumbnail: new URL(
+            `/src/assets/images/chatter/Preview.png`,
+            import.meta.url
+          ),
+          client: 'Personal',
+          technologies: 'Figma',
+          content: {
+            mainImage: new URL(
+              `/src/assets/images/chatter/MainImage.png`,
+              import.meta.url
+            ),
+            secondary1: new URL(
+              `/src/assets/images/chatter/Secondary1.png`,
+              import.meta.url
+            ),
+            secondary2: new URL(
+              `/src/assets/images/chatter/Secondary2.png`,
+              import.meta.url
+            ),
+            secondary3: new URL(
+              `/src/assets/images/chatter/Secondary3.png`,
+              import.meta.url
+            ),
+            secondary4: new URL(
+              `/src/assets/images/chatter/Secondary4.png`,
+              import.meta.url
+            ),
+          },
+        },
+        {
+          id: 3,
+          name: 'Project3',
+          thumbnail: 'chatter/Preview.png',
+        },
+        {
+          id: 4,
+          name: 'Project4',
+          thumbnail: 'chatter/Preview.png',
+        },
+        {
+          id: 5,
+          name: 'Project5',
+          thumbnail: 'chatter/Preview.png',
+        },
+      ],
+    };
+  },
+  provide() {
+    return {
+      projects: this.projects,
+    };
   },
 };
 </script>
@@ -38,6 +118,7 @@ export default {
 @font-face {
   font-family: 'Syne';
   src: url('@/assets/fonts/Syne-Regular.ttf');
+  font-display: swap;
 }
 
 html,
@@ -163,6 +244,10 @@ q:after {
 table {
   border-collapse: collapse;
   border-spacing: 0;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 .bg {
