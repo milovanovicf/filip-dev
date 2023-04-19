@@ -32,7 +32,7 @@
   justify-content: space-between;
 
   .title {
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     text-transform: uppercase;
     padding-bottom: 0.8rem;
   }
@@ -61,11 +61,11 @@
 @media only screen and (max-width: 1000px) {
   .footer {
     a {
-      font-size: 1.5rem;
+      font-size: 2rem;
     }
 
     p {
-      font-size: 1.5rem;
+      font-size: 2rem;
     }
   }
 }
