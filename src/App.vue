@@ -61,22 +61,22 @@ export default {
         },
         {
           id: 2,
-          name: 'Nesto',
+          name: 'Learn English Bre!',
           description:
-            'Dating app that provides new and exciting ways to find your significant other.',
+            'Online English language learning platform for Serbo-Croatian speaking people.',
           thumbnail: new URL(
-            `/src/assets/images/chatter/Preview.png`,
+            `/src/assets/images/learnEnglishBre/Preview.png`,
             import.meta.url
           ),
           client: 'Personal',
           technologies: 'Figma',
           content: {
             mainImage: new URL(
-              `/src/assets/images/chatter/MainImage.png`,
+              `/src/assets/images/learnEnglishBre/MainImage.png`,
               import.meta.url
             ),
             secondary1: new URL(
-              `/src/assets/images/chatter/Secondary1.png`,
+              `/src/assets/images/learnEnglishBre/Secondary1.png`,
               import.meta.url
             ),
             secondary2: new URL(

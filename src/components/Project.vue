@@ -35,9 +35,14 @@
     </div>
   </div>
   <div class="next-project">
-    <router-link :to="`/projects/${nextProjectSwitch.id}`">
-      <img :src="nextProjectSwitch.content.nextProject" />
-      <p class="text">Next - {{ nextProjectSwitch.name }}</p>
+    <p class="text">Next - {{ nextProjectSwitch.name }}</p>
+
+    <router-link
+      :to="`/projects/${nextProjectSwitch.id}`"
+      v-bind:style="{
+        backgroundImage: `url(${nextProjectSwitch.content.nextProject})`,
+      }"
+    >
     </router-link>
   </div>
 </template>
@@ -268,40 +273,39 @@ export default {
 .next-project {
   height: 30rem;
   width: 100%;
+  position: relative;
+
+  &:hover {
+    .text {
+      opacity: 0;
+    }
+  }
+
+  .text {
+    font-size: 4rem;
+    text-transform: uppercase;
+    color: #fff;
+    position: absolute;
+    z-index: 5;
+    transition: 0.2s ease-in-out;
+    opacity: 1;
+  }
 
   a {
     display: block;
     position: relative;
     width: 100%;
     height: 100%;
+    text-align: center;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: 0.2s ease-in-out;
+    opacity: 0.5;
 
     &:hover {
-      .text {
-        display: none;
-      }
-      img {
-        opacity: 1;
-      }
+      opacity: 1;
     }
-
-    .text {
-      font-size: 5rem;
-      text-transform: uppercase;
-      color: #fff;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      transition: 0.2s ease-in-out;
-    }
-  }
-
-  img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    opacity: 0.5;
-    transition: 0.2s ease-in-out;
   }
 }
 </style>
