@@ -33,11 +33,12 @@
         <img :src="selectedProject.content.secondary4" alt="secondary4" />
       </div>
     </div>
-    <div class="next-project">
-      <router-link :to="`/projects/${selectedProject.id + 1}`"
-        >Next</router-link
-      >
-    </div>
+  </div>
+  <div class="next-project">
+    <router-link :to="`/projects/${nextProjectSwitch.id}`">
+      <img :src="nextProjectSwitch.content.nextProject" />
+      <p class="text">Next - {{ nextProjectSwitch.name }}</p>
+    </router-link>
   </div>
 </template>
 
@@ -47,6 +48,7 @@ export default {
   data() {
     return {
       selectedProject: null,
+      nextSelectedProject: null,
     };
   },
   methods: {
@@ -55,7 +57,21 @@ export default {
       const foundProject = this.projects.find(
         (project) => project.id === Number(projectId)
       );
+      const nextProject = this.projects.find(
+        (project) => project.id === Number(projectId) + 1
+      );
+
       this.selectedProject = foundProject;
+      this.nextSelectedProject = nextProject;
+    },
+  },
+  computed: {
+    nextProjectSwitch() {
+      if (!this.nextSelectedProject) {
+        return this.projects[0];
+      } else {
+        return this.nextSelectedProject;
+      }
     },
   },
   created() {
@@ -90,6 +106,7 @@ export default {
     font-size: 9rem;
     text-transform: uppercase;
     padding-bottom: 5rem;
+    text-align: center;
   }
 
   .project-details {
@@ -164,12 +181,6 @@ export default {
       }
     }
   }
-
-  .next-project {
-    height: 25rem;
-    width: 100%;
-    background-color: burlywood;
-  }
 }
 
 @media only screen and (max-width: 1500px) {
@@ -225,6 +236,10 @@ export default {
         }
       }
     }
+
+    .details {
+      width: 85%;
+    }
   }
 }
 
@@ -247,6 +262,46 @@ export default {
     .next-project {
       height: 10rem;
     }
+  }
+}
+
+.next-project {
+  height: 30rem;
+  width: 100%;
+
+  a {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+    &:hover {
+      .text {
+        display: none;
+      }
+      img {
+        opacity: 1;
+      }
+    }
+
+    .text {
+      font-size: 5rem;
+      text-transform: uppercase;
+      color: #fff;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      transition: 0.2s ease-in-out;
+    }
+  }
+
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+    transition: 0.2s ease-in-out;
   }
 }
 </style>

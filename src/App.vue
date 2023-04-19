@@ -53,6 +53,10 @@ export default {
               `/src/assets/images/chatter/Secondary4.png`,
               import.meta.url
             ),
+            nextProject: new URL(
+              `/src/assets/images/chatter/NextProject.png`,
+              import.meta.url
+            ),
           },
         },
         {
@@ -87,22 +91,11 @@ export default {
               `/src/assets/images/chatter/Secondary4.png`,
               import.meta.url
             ),
+            nextProject: new URL(
+              `/src/assets/images/learnEnglishBre/NextProject.png`,
+              import.meta.url
+            ),
           },
-        },
-        {
-          id: 3,
-          name: 'Project3',
-          thumbnail: 'chatter/Preview.png',
-        },
-        {
-          id: 4,
-          name: 'Project4',
-          thumbnail: 'chatter/Preview.png',
-        },
-        {
-          id: 5,
-          name: 'Project5',
-          thumbnail: 'chatter/Preview.png',
         },
       ],
     };
