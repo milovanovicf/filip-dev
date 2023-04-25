@@ -27,7 +27,9 @@
       </div>
       <div class="row">
         <h2>Technologies</h2>
-        <p>{{ selectedProject.technologies }}</p>
+        <p v-for="technology in selectedProject.technologies" :key="technology">
+          {{ technology }}
+        </p>
       </div>
     </div>
     <div class="project__details">
@@ -313,13 +315,18 @@ export default {
 
     &__platform {
       margin: 0 5rem 10rem 5rem;
+      flex-direction: column;
     }
 
     .wireframes {
       &__content {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        grid-gap: 6rem;
+        grid-gap: 1rem;
+
+        img {
+          width: 100%;
+        }
       }
     }
 
@@ -355,12 +362,6 @@ export default {
 
     &__platform {
       margin: 0 0 5rem 0;
-    }
-
-    .wireframes {
-      &__content {
-        grid-gap: 3rem;
-      }
     }
 
     .features {

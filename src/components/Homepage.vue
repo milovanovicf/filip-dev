@@ -2,16 +2,15 @@
   <main class="homepage">
     <div class="title grid-col-span-2">
       <h3>Filip Milovanovic</h3>
-      <h3>Web Developer</h3>
+      <h3>Web Developer & Ui/ux designer</h3>
       <h3>Belgrade, Serbia</h3>
     </div>
     <div class="about grid-col-span-2">
       <p class="subtitle">About</p>
       <p class="content">
-        Currently working as a full stack web developer for
-        <span style="font-style: italic; font-size: 1.9rem">Dodo Stt</span>. I
-        have over two years of experience as a web developer. In my free time i
-        do illustrations and ui/ux.
+        Web developer who cares deeply about user experience. Serious passion
+        for UI design and new technologies. Fan of space, sports and all things
+        art.
       </p>
     </div>
     <div class="goals grid-col-span-2">
@@ -33,7 +32,8 @@
       </ul>
     </div>
     <p class="button-first-text grid-col-span-2">
-      Check out my work <a href="#">here</a>. Write me an email or message me on
+      Check out my work <router-link to="/projects">here</router-link>. Write me
+      an email or message me on
       <a href="https://www.linkedin.com/in/filip-milovanovic-b8272a218/"
         >LinkedIn</a
       >
@@ -68,6 +68,10 @@
     letter-spacing: 0.1rem;
     line-height: 3rem;
     text-transform: uppercase;
+
+    &:nth-child(2) {
+      padding-right: 20rem;
+    }
   }
 
   p {
@@ -115,6 +119,7 @@
   .button-first-text {
     margin: 0 3rem;
     grid-column: 5 / span 2;
+    line-height: 2.3rem;
   }
 
   .button {
@@ -145,7 +150,7 @@
   }
 
   .subtitle {
-    font-size: 1.5rem;
+    font-size: 1.7rem;
     font-weight: 800;
     padding-bottom: 1rem;
     letter-spacing: 0.2rem;
@@ -154,8 +159,18 @@
   .content {
     padding-right: 10rem;
     letter-spacing: 0.06rem;
+    line-height: 2.3rem;
   }
 }
+
+@media only screen and (min-width: 1920px) {
+  .homepage {
+   .button {
+    transform: translateY(-5rem);
+   }
+  }
+}
+
 
 @media only screen and (max-width: 1500px) {
   .homepage {
@@ -189,6 +204,12 @@
     top: 40%;
     bottom: auto;
     background-color: #2a4b49;
+
+    h3 {
+      &:nth-child(2) {
+        padding-right: 10rem;
+      }
+    }
 
     .title {
       color: #cc6d54;
@@ -227,7 +248,7 @@
 
     .content,
     .button-first-text {
-      line-height: 2rem;
+      line-height: 2.3rem;
     }
 
     .button-first-text {

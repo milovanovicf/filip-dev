@@ -7,20 +7,33 @@
     </p>
     <div class="navmenu">
       <ul class="navmenu__desktop">
-        <li><router-link to="/projects">Projects</router-link></li>
+        <li>
+          <router-link to="/projects"
+            ><span class="less-than">&lt;</span> projects /<span
+              class="more-than"
+              >&gt;</span
+            ></router-link
+          >
+        </li>
         <li>
           <a href="https://www.instagram.com/filip.jpeg/" target="_blank"
-            >Instagram</a
+            >instagram</a
           >
         </li>
         <li>
           <a
             href="https://www.linkedin.com/in/filip-milovanovic-b8272a218/"
             target="_blank"
-            >LinkedIn</a
+            >linkedIn</a
           >
         </li>
-        <li><router-link to="/about">About</router-link></li>
+        <li>
+          <router-link to="/about"
+            ><span class="less-than">&lt;</span> about /<span class="more-than"
+              >&gt;</span
+            ></router-link
+          >
+        </li>
       </ul>
       <div class="navmenu__mobile">
         <a
@@ -101,19 +114,40 @@ export default {
     }
   }
   .navmenu {
-    width: 25%;
+    width: 27%;
     &__desktop {
       display: flex;
       justify-content: space-between;
 
       li,
       a {
-        font-size: 1.8rem;
+        font-size: 2rem;
         color: #fff;
+
+        .less-than {
+          display: inline-block;
+          font-size: inherit;
+          transition: all 0.2s ease-in-out;
+          color: #fff;
+        }
+        .more-than {
+          display: inline-block;
+          font-size: inherit;
+          transition: all 0.2s ease-in-out;
+          color: #fff;
+        }
       }
 
       a.router-link-active {
-        text-decoration: underline;
+        color: #d16f54;
+
+        .less-than {
+          color: #d16f54;
+        }
+
+        .more-than {
+          color: #d16f54;
+        }
       }
 
       a,
@@ -124,6 +158,15 @@ export default {
 
         &:hover {
           color: #000;
+
+          .less-than {
+            transform: translateX(-5px);
+            color: #000;
+          }
+          .more-than {
+            transform: translateX(5px);
+            color: #000;
+          }
         }
       }
     }
@@ -228,6 +271,16 @@ export default {
 
     .opened {
       transform: translate(0);
+    }
+  }
+}
+
+@media only screen and (min-width: 1920px) {
+   .navbar {
+    // padding: 0 10rem;
+
+    .navmenu {
+      width: 30%;
     }
   }
 }

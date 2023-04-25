@@ -26,14 +26,24 @@ export default {
 <style lang="scss" scoped>
 .project {
   cursor: pointer;
+  overflow: hidden;
+
+  &:hover {
+    img {
+      filter: blur(2px);
+      transform: scale(1.2);
+    }
+  }
 
   img {
     width: 100%;
     height: 100%;
+    transition: all 0.2s;
   }
 
   a {
     text-decoration: none;
+    overflow: hidden;
   }
 
   h3 {

@@ -2,10 +2,6 @@ const projectsData = [
   {
     id: 1,
     name: 'Chatter',
-<<<<<<< Updated upstream
-=======
-    slug: 'chatter',
->>>>>>> Stashed changes
     overview:
       'Dating app that provides new and exciting ways to find your significant other.',
     goals:
@@ -15,11 +11,7 @@ const projectsData = [
       import.meta.url
     ),
     platform: 'Mobile',
-<<<<<<< Updated upstream
-    technologies: 'Figma',
-=======
     technologies: ['Figma'],
->>>>>>> Stashed changes
     features: [
       {
         id: 1,
@@ -84,27 +76,16 @@ const projectsData = [
   {
     id: 2,
     name: 'Learn English Bre!',
-<<<<<<< Updated upstream
-    description:
-      'Online English language learning platform for Serbo-Croatian speaking people.',
-=======
-    slug: 'learn-english-bre',
     overview:
       'Online English language learning platform for improving overall language skills for speaking, writing and most importantly understanding.',
     goals:
       'Help Serbo-Croatian speaking people to learn Enlgish faster and easier.',
->>>>>>> Stashed changes
     thumbnail: new URL(
       `/src/assets/images/learnEnglishBre/Preview.png`,
       import.meta.url
     ),
-<<<<<<< Updated upstream
-    client: 'Personal',
-    technologies: 'Figma',
-=======
     platform: 'Desktop',
     technologies: ['Figma'],
->>>>>>> Stashed changes
     content: {
       mainImage: new URL(
         `/src/assets/images/learnEnglishBre/MainImage.png`,
