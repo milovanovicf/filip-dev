@@ -14,10 +14,15 @@
 <script>
 import ProjectElement from './ProjectElement.vue';
 import Footer from './Footer.vue';
+import projectsData from '../ProjectsData';
 
 export default {
+  data() {
+    return {
+      projects: projectsData,
+    };
+  },
   components: { ProjectElement, Footer },
-  inject: ['projects'],
 };
 </script>
 

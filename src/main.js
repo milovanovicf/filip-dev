@@ -7,6 +7,7 @@ import Projects from './components/Projects.vue';
 import Project from './components/Project.vue';
 import About from './components/About.vue';
 import NotFound from './components/NotFound.vue';
+import { VueScreenSizeMixin } from 'vue-screen-size';
 
 const router = createRouter({
   history: createWebHistory(),
@@ -47,5 +48,6 @@ const router = createRouter({
 const app = createApp(App);
 
 app.use(router);
+app.mixin(VueScreenSizeMixin);
 
 app.mount('#app');
