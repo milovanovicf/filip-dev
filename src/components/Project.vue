@@ -80,7 +80,7 @@
     <p class="text">Next - {{ nextProjectSwitch.name }}</p>
 
     <router-link
-      :to="`/projects/${nextProjectSwitch.id}`"
+      :to="`/projects/${nextProjectSwitch.slug}`"
       v-bind:style="{
         backgroundImage: `url(${nextProjectSwitch.content.nextProject})`,
       }"
@@ -101,12 +101,12 @@ export default {
   },
   methods: {
     findProject(route) {
-      const projectId = route.params.projectId;
+      const projectSlug = route.params.slug;
       const foundProject = this.projects.find(
-        (project) => project.id === Number(projectId)
+        (project) => project.slug === projectSlug
       );
       const nextProject = this.projects.find(
-        (project) => project.id === Number(projectId) + 1
+        (project) => project.id === foundProject.id + 1
       );
 
       this.selectedProject = foundProject;

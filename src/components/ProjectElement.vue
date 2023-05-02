@@ -15,7 +15,7 @@ export default {
       return {
         name: 'project',
         params: {
-          projectId: this.projectContent.id,
+          slug: this.projectContent.slug,
         },
       };
     },

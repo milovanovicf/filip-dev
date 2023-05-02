@@ -2,6 +2,7 @@ const projectsData = [
   {
     id: 1,
     name: 'Chatter',
+    slug: 'chatter',
     overview:
       'Dating app that provides new and exciting ways to find your significant other.',
     goals:
@@ -80,6 +81,7 @@ const projectsData = [
       'Online English language learning platform for improving overall language skills for speaking, writing and most importantly understanding.',
     goals:
       'Help Serbo-Croatian speaking people to learn Enlgish faster and easier.',
+    slug: 'learn-english-bre',
     thumbnail: new URL(
       `/src/assets/images/learnEnglishBre/Preview.png`,
       import.meta.url
