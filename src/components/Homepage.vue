@@ -165,16 +165,34 @@
 
 @media only screen and (min-width: 1920px) {
   .homepage {
-   .button {
-    transform: translateY(-5rem);
-   }
+    .button {
+      transform: translateY(-5rem);
+    }
   }
 }
 
-
-@media only screen and (max-width: 1500px) {
+@media only screen and (max-width: 1600px) {
   .homepage {
     margin: 0 10rem;
+    grid-gap: 0.5rem;
+
+    h3 {
+      &:nth-child(2) {
+        padding-right: 10rem;
+      }
+    }
+
+    .button {
+      transform: translateY(-5rem);
+    }
+
+    .content {
+      padding-right: 5rem;
+    }
+
+    ul {
+      padding-bottom: 3rem;
+    }
   }
 }
 

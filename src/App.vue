@@ -1,5 +1,5 @@
 <template>
-  <div class="bg">
+  <div class="bg" :class="{ whenProjects: isProjects }">
     <Navbar />
     <router-view></router-view>
   </div>
@@ -9,13 +9,16 @@ import Navbar from './components/Navbar.vue';
 
 export default {
   components: { Navbar },
+  data() {
+    return {
+      isProjects: false,
+    };
+  },
   watch: {
     $route(route) {
-      if (route.path.includes('/projects')) {
-        document.querySelector('.bg').classList.add('whenProjects');
-      } else {
-        document.querySelector('.bg').classList.remove('whenProjects');
-      }
+      route.path.includes('/projects')
+        ? (this.isProjects = true)
+        : (this.isProjects = false);
     },
   },
 };

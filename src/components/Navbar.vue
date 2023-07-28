@@ -1,10 +1,8 @@
 <template>
   <div class="navbar">
-    <p class="logo">
-      <router-link to="/"
-        ><img src="../assets/images/Logo_v1.svg" alt="logo"
-      /></router-link>
-    </p>
+    <router-link to="/" class="logo"
+      ><img src="../assets/images/Logo_v1.svg" alt="logo"
+    /></router-link>
     <div class="navmenu">
       <ul class="navmenu__desktop">
         <li>
@@ -106,15 +104,17 @@ export default {
   align-items: center;
   padding: 4rem 15rem;
   color: #fff;
-
+  height: 8rem;
   .logo {
-    width: 8rem;
+    flex: 1 1 30%;
+
     img {
-      width: 100%;
+      width: 8rem;
     }
   }
   .navmenu {
-    width: 27%;
+    flex: 1 1 1%;
+
     &__desktop {
       display: flex;
       justify-content: space-between;
@@ -275,23 +275,9 @@ export default {
   }
 }
 
-@media only screen and (min-width: 1920px) {
-   .navbar {
-    // padding: 0 10rem;
-
-    .navmenu {
-      width: 30%;
-    }
-  }
-}
-
-@media only screen and (max-width: 1500px) {
+@media only screen and (max-width: 1600px) {
   .navbar {
-    padding: 0 10rem;
-
-    .navmenu {
-      width: 35%;
-    }
+    padding: 5rem 9rem;
   }
 }
 
