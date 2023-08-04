@@ -157,15 +157,15 @@ export default {
         cursor: pointer;
 
         &:hover {
-          color: #000;
+          color: #d16f54;
 
           .less-than {
             transform: translateX(-5px);
-            color: #000;
+            color: #d16f54;
           }
           .more-than {
             transform: translateX(5px);
-            color: #000;
+            color: #d16f54;
           }
         }
       }
@@ -278,16 +278,17 @@ export default {
 @media only screen and (max-width: 1600px) {
   .navbar {
     padding: 5rem 9rem;
+
+    .navmenu {
+      flex: none;
+      width: 50%;
+    }
   }
 }
 
 @media only screen and (max-width: 1000px) {
   .navbar {
     padding: 0 10rem;
-
-    .navmenu {
-      width: 45%;
-    }
   }
 }
 
@@ -295,6 +296,10 @@ export default {
   .navbar {
     padding: 0 5rem;
     overflow: hidden;
+
+    .navmenu {
+      width: 60%;
+    }
   }
 }
 
