@@ -39,21 +39,28 @@ export default {
   position: sticky;
   top: 10%;
   margin-top: 10rem;
+  width: 35%;
 
   h2 {
     font-size: 3.5rem;
     margin-bottom: 1rem;
-    color: #d16f54;
+    color: #767676;
   }
 
   p {
-    font-size: 2rem;
+    font-size: 2.3rem;
   }
 
   .technologies,
   .colors,
   .fonts {
     margin-bottom: 5rem;
+  }
+
+  .technologies {
+    p {
+      margin-bottom: 1rem;
+    }
   }
 
   .colors {
@@ -64,7 +71,6 @@ export default {
       .color {
         width: 10rem;
         height: 5rem;
-        background-color: aquamarine;
         margin-right: 2rem;
       }
     }
@@ -79,10 +85,36 @@ export default {
       }
 
       &__example {
-        font-size: 1.5rem;
+        font-size: 1.7rem;
         line-height: 3rem;
       }
     }
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .description {
+    width: 45%;
+    .fonts {
+      .font {
+        margin-bottom: 3rem;
+
+        &__name {
+          margin-bottom: 1.5rem;
+        }
+
+        &__example {
+          font-size: 1.5rem;
+          line-height: 3rem;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .description {
+    width: 100%;
   }
 }
 </style>

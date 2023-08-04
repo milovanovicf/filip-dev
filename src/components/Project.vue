@@ -12,7 +12,13 @@
         </p>
         <h4>Goal</h4>
         <p>{{ selectedProject.goals }}</p>
-        <a href="#" class="button">Visit Website</a>
+        <a
+          :class="{ disabled: !selectedProject.link }"
+          :href="selectedProject.link"
+          class="button"
+          target="_blank"
+          >Visit Website</a
+        >
       </div>
     </div>
     <ProjectDesktop
@@ -139,10 +145,15 @@ export default {
         transition: 0.2s ease-in-out;
         font-style: normal;
 
-        &:hover {
+        &:not(.disabled):hover {
           color: #d16f54;
           background-color: #fff;
         }
+      }
+      .disabled {
+        cursor: not-allowed;
+        background-color: #6d6d6d;
+        pointer-events: all !important;
       }
     }
   }

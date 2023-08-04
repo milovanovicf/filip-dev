@@ -175,7 +175,7 @@ html {
 
 .whenProjects {
   overflow: visible;
-  background: #1f3d3c;
+  background: #122c2b;
   height: auto;
 }
 
