@@ -12,6 +12,7 @@ const projectsData = [
       import.meta.url
     ),
     platform: 'Mobile',
+    link: null,
     technologies: ['Figma'],
     overviewImage: new URL(
       `/src/assets/images/chatter/Overview.png`,
@@ -42,7 +43,7 @@ const projectsData = [
   {
     id: 2,
     name: 'Learn English Bre!',
-    slug: 'learn-english-bre',
+    slug: 'learnenglishbre',
     overview:
       'Online English language learning platform for improving overall language skills for speaking, writing and most importantly understanding.',
     goals:
@@ -52,6 +53,7 @@ const projectsData = [
       import.meta.url
     ),
     platform: 'Desktop',
+    link: null,
     technologies: ['Figma'],
     mainImage: new URL(
       `/src/assets/images/learnEnglishBre/LandingPage.png`,
@@ -67,6 +69,35 @@ const projectsData = [
     ),
     colors: ['#85D09F', '#F55D4D', '#FFF', '#292929'],
     fonts: ['Raleway', 'Rock Salt'],
+  },
+  {
+    id: 3,
+    name: 'Steamy Savings',
+    slug: 'steamysavings',
+    overview:
+      'Steamy Savings is all about finding the best prices on digital game downloads for PC',
+    goals: 'Easy way to find best deals of your favourite PC game.',
+    thumbnail: new URL(
+      `/src/assets/images/steamySavings/Preview.png`,
+      import.meta.url
+    ),
+    platform: 'Desktop',
+    link: 'https://steamysavings.netlify.app/',
+    technologies: ['VueJs', 'Illustrator', 'Photoshop'],
+    mainImage: new URL(
+      `/src/assets/images/steamySavings/LandingPage.png`,
+      import.meta.url
+    ),
+    overviewImage: new URL(
+      `/src/assets/images/steamySavings/Overview1.png`,
+      import.meta.url
+    ),
+    nextProject: new URL(
+      `/src/assets/images/steamySavings/NextProject.png`,
+      import.meta.url
+    ),
+    colors: ['#273047', '#161a26', '#292940', '#c5d2f5'],
+    fonts: ['TT Supermolot Neue Condensed Regular'],
   },
 ];
 

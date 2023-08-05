@@ -133,7 +133,7 @@
     text-decoration: none;
     color: #000;
     margin: 3rem;
-    transform: translateY(-10rem);
+    transform: translateY(-5rem);
     border-radius: 5px;
     transition: 0.2s ease-in-out;
     font-style: normal;
@@ -163,14 +163,6 @@
   }
 }
 
-@media only screen and (min-width: 1920px) {
-  .homepage {
-    .button {
-      transform: translateY(-5rem);
-    }
-  }
-}
-
 @media only screen and (max-width: 1600px) {
   .homepage {
     margin: 0 10rem;
@@ -180,10 +172,6 @@
       &:nth-child(2) {
         padding-right: 10rem;
       }
-    }
-
-    .button {
-      transform: translateY(-5rem);
     }
 
     .content {
@@ -200,7 +188,6 @@
   .homepage {
     .button {
       font-size: 1.7rem;
-      transform: translateY(-5rem);
       margin: 3rem 0;
     }
 

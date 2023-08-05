@@ -35,6 +35,12 @@ export default {
   font-display: swap;
 }
 
+@font-face {
+  font-family: 'TT Supermolot Neue Condensed Regular';
+  src: url('@/assets/fonts/TTSupermolotNeue-CondRegular.ttf');
+  font-display: swap;
+}
+
 html,
 body,
 div,

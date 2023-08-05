@@ -64,6 +64,10 @@ export default {
   .project-desktop {
     flex-direction: column;
 
+    h1 {
+      font-size: 6rem;
+    }
+
     .img-container {
       width: 100%;
     }
