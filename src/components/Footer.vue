@@ -5,8 +5,8 @@
     </div>
     <div class="email">
       <p class="title">Email</p>
-      <a href="mailto:milovanovicfilip007@gmail.com"
-        >milovanovicfilip007@gmail.com</a
+      <a href="mailto:filip.milovanovic.dev@gmail.com"
+        >filip.milovanovic.dev@gmail.com</a
       >
     </div>
     <div class="location">
@@ -16,8 +16,16 @@
     <div class="socials">
       <p class="title">Social</p>
       <ul>
-        <li><a href="#">LinkedIn</a></li>
-        <li><a href="#">Instagram</a></li>
+        <li>
+          <a href="https://www.instagram.com/" target="_blank">instagram</a>
+        </li>
+        <li>
+          <a
+            href="https://www.linkedin.com/in/filip-milovanovic-b8272a218/"
+            target="_blank"
+            >linkedIn</a
+          >
+        </li>
       </ul>
     </div>
   </div>

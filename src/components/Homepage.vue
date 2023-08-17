@@ -41,9 +41,9 @@
       always interested in working on ambitious projects with positive people.
     </p>
     <a
-      href="mailto:milovanovicfilip007@gmail.com"
+      href="mailto:filip.milovanovic.dev@gmail.com"
       class="button grid-col-span-2"
-      >milovanovicfilip007@gmail.com</a
+      >filip.milovanovic.dev@gmail.com</a
     >
     <p class="button-second-text grid-col-span-2">
       © 2023 Filip Milovanovic. All rights reserved.
@@ -54,13 +54,12 @@
 <style lang="scss" scoped>
 .homepage {
   position: absolute;
-  bottom: 0;
+  bottom: 5%;
   left: 0;
   margin: 0 15rem;
   color: #fff;
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  grid-template-rows: repeat(3, 1fr);
   grid-gap: 1.5rem;
 
   h3 {

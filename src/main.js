@@ -7,7 +7,11 @@ import Projects from './components/Projects.vue';
 import Project from './components/Project.vue';
 import About from './components/About.vue';
 import NotFound from './components/NotFound.vue';
-import { VueScreenSizeMixin } from 'vue-screen-size';
+import projectsData from './ProjectsData';
+
+const projectExists = (slug) => {
+  return projectsData.some((project) => project.slug === slug);
+};
 
 const router = createRouter({
   history: createWebHistory(),
@@ -26,6 +30,13 @@ const router = createRouter({
       name: 'project',
       path: '/projects/:slug',
       component: Project,
+      beforeEnter: (to, _, next) => {
+        if (projectExists(to.params.slug)) {
+          next();
+        } else {
+          next('/projects');
+        }
+      },
     },
     {
       name: 'about',
@@ -48,6 +59,5 @@ const router = createRouter({
 const app = createApp(App);
 
 app.use(router);
-app.mixin(VueScreenSizeMixin);
 
 app.mount('#app');

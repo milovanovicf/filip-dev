@@ -1,8 +1,10 @@
 <template>
   <div class="navbar">
-    <router-link to="/" class="logo"
-      ><img src="../assets/images/Logo_v1.svg" alt="logo"
-    /></router-link>
+    <div class="logo-container">
+      <router-link to="/" class="logo"
+        ><img src="../assets/images/Logo_v1.svg" alt="logo"
+      /></router-link>
+    </div>
     <div class="navmenu">
       <ul class="navmenu__desktop">
         <li>
@@ -14,9 +16,7 @@
           >
         </li>
         <li>
-          <a href="https://www.instagram.com/filip.jpeg/" target="_blank"
-            >instagram</a
-          >
+          <a href="https://www.instagram.com/" target="_blank">instagram</a>
         </li>
         <li>
           <a
@@ -105,15 +105,13 @@ export default {
   padding: 4rem 15rem;
   color: #fff;
   height: 8rem;
-  .logo {
-    flex: 1 1 30%;
-
+  .logo-container {
     img {
       width: 8rem;
     }
   }
   .navmenu {
-    flex: 1 1 1%;
+    width: 30%;
 
     &__desktop {
       display: flex;
@@ -280,8 +278,7 @@ export default {
     padding: 5rem 9rem;
 
     .navmenu {
-      flex: none;
-      width: 50%;
+      width: 40%;
     }
   }
 }
