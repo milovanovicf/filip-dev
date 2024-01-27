@@ -30,8 +30,8 @@ export default {
 
   &:hover {
     img {
-      filter: blur(2px);
-      transform: scale(1.2);
+      filter: blur(1px);
+      transform: scale(1.1);
     }
   }
 

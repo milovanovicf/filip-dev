@@ -175,7 +175,7 @@ export default {
         inset: 0 0 0 0;
         z-index: 2;
         background-color: #fff;
-        transition: all 0.2s ease-in-out;
+        transition: all 0.2s linear;
         transform: translate(100%);
 
         ul {
@@ -192,19 +192,19 @@ export default {
 
         .mobile-item:nth-child(1) {
           transform: translateX(100rem);
-          transition: all 0.3s ease-in-out;
+          transition: all 0.5s linear;
         }
         .mobile-item:nth-child(2) {
           transform: translateX(100rem);
-          transition: all 0.5s ease-in-out;
+          transition: all 0.5s linear;
         }
         .mobile-item:nth-child(3) {
           transform: translateX(100rem);
-          transition: all 0.7s ease-in-out;
+          transition: all 0.5s linear;
         }
         .mobile-item:nth-child(4) {
           transform: translateX(100rem);
-          transition: all 0.9s ease-in-out;
+          transition: all 0.5s linear;
         }
 
         .opened-list {
@@ -218,7 +218,7 @@ export default {
       }
 
       .button-mobile {
-        position: absolute;
+        position: fixed;
         top: 5%;
         right: 5%;
         z-index: 3;
