@@ -12,8 +12,8 @@
 </template>
 
 <script>
-import ProjectElement from './ProjectElement.vue';
-import Footer from './Footer.vue';
+import ProjectElement from '../components/ProjectElement.vue';
+import Footer from '../components/Footer.vue';
 import projectsData from '../ProjectsData';
 
 export default {

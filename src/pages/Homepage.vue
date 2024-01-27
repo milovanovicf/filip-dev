@@ -21,7 +21,10 @@
       <ul>
         <p class="subtitle">Development</p>
         <li>Vuejs</li>
+        <li>TypeScript</li>
         <li>Ruby on Rails</li>
+        <li>PHP</li>
+        <li>WordPress</li>
         <li>Sass</li>
       </ul>
       <ul>
@@ -54,12 +57,13 @@
 <style lang="scss" scoped>
 .homepage {
   position: absolute;
-  bottom: 5%;
+  bottom: 0;
   left: 0;
   margin: 0 15rem;
   color: #fff;
   display: grid;
   grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(3, 12rem);
   grid-gap: 1.5rem;
 
   h3 {
@@ -119,6 +123,7 @@
     margin: 0 3rem;
     grid-column: 5 / span 2;
     line-height: 2.3rem;
+    letter-spacing: 0.06rem;
   }
 
   .button {
@@ -131,8 +136,7 @@
     font-size: 2rem;
     text-decoration: none;
     color: #000;
-    margin: 3rem;
-    transform: translateY(-5rem);
+    margin: 2rem;
     border-radius: 5px;
     transition: 0.2s ease-in-out;
     font-style: normal;

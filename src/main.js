@@ -2,11 +2,11 @@ import { createApp } from 'vue';
 import { createRouter, createWebHistory } from 'vue-router';
 
 import App from './App.vue';
-import Homepage from './components/Homepage.vue';
-import Projects from './components/Projects.vue';
+import Homepage from './pages/Homepage.vue';
+import Projects from './pages/Projects.vue';
 import Project from './components/Project.vue';
-import About from './components/About.vue';
-import NotFound from './components/NotFound.vue';
+import About from './pages/About.vue';
+import NotFound from './pages/NotFound.vue';
 import projectsData from './ProjectsData';
 
 const projectExists = (slug) => {
