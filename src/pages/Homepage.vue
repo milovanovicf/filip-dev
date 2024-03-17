@@ -168,7 +168,7 @@
 
 @media only screen and (max-width: 1600px) {
   .homepage {
-    margin: 0 10rem;
+    margin: 0 9rem;
     grid-gap: 0.5rem;
 
     h3 {
@@ -189,14 +189,27 @@
 
 @media only screen and (max-width: 1400px) {
   .homepage {
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+    position: relative;
+
+    .title,
+    .goals,
+    .about {
+      padding-bottom: 2rem;
+    }
+
     .button {
       font-size: 1.7rem;
-      margin: 3rem 0;
+      padding: 3rem 2rem;
+      margin: 2rem 0;
+      width: max-content;
     }
 
     .button-first-text,
     .button-second-text {
-      margin: 0;
+      margin: 0 0 2rem 0;
     }
     .content {
       padding-right: 7rem;
@@ -212,6 +225,8 @@
     top: 40%;
     bottom: auto;
     background-color: #2a4b49;
+    width: auto;
+    position: absolute;
 
     h3 {
       &:nth-child(2) {
@@ -248,6 +263,7 @@
     .button {
       padding: 3rem 0;
       font-size: 2rem;
+      width: auto;
     }
 
     .content {
@@ -260,7 +276,7 @@
     }
 
     .button-first-text {
-      padding-bottom: 4rem;
+      padding-bottom: 2rem;
     }
 
     .button-second-text {

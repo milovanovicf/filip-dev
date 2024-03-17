@@ -207,6 +207,13 @@ html {
   }
 }
 
+@media only screen and (max-width: 1400px) {
+  .bg {
+    height: 100%;
+    background-image: url('assets/images/Backgroundv4_1_flipped.jpg');
+  }
+}
+
 @media only screen and (max-width: 850px) {
   .bg {
     background-image: url('assets/images/BackgroundMobilev4_1.jpg');

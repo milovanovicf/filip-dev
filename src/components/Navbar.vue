@@ -105,9 +105,13 @@ export default {
   padding: 4rem 15rem;
   color: #fff;
   height: 8rem;
+
   .logo-container {
+    width: 4rem;
+
     img {
-      width: 8rem;
+      width: 100%;
+      height: 100%;
     }
   }
   .navmenu {
@@ -218,7 +222,7 @@ export default {
       }
 
       .button-mobile {
-        position: fixed;
+        position: absolute;
         top: 5%;
         right: 5%;
         z-index: 3;
@@ -227,8 +231,8 @@ export default {
         span {
           position: relative;
           display: block;
-          width: 30px;
-          height: 2px;
+          width: 40px;
+          height: 2.5px;
           background: #fff;
           transition: all 0.2s ease-in-out;
 
@@ -237,17 +241,17 @@ export default {
             position: absolute;
             background: #fff;
             content: '';
-            width: 25px;
-            height: 2px;
+            width: 35px;
+            height: 2.5px;
             transition: all 0.2s ease-in-out;
           }
 
           &:before {
-            top: -8px;
+            top: -9px;
           }
 
           &:after {
-            top: 8px;
+            top: 9px;
           }
         }
       }
@@ -300,7 +304,7 @@ export default {
   }
 }
 
-@media only screen and (max-width: 750px) {
+@media only screen and (max-width: 1024px) {
   .navbar {
     .navmenu {
       .navmenu__desktop {
@@ -310,7 +314,7 @@ export default {
   }
 }
 
-@media only screen and (min-width: 750px) {
+@media only screen and (min-width: 1025px) {
   .navbar {
     .navmenu {
       .navmenu__mobile {

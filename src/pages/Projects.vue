@@ -69,7 +69,7 @@ export default {
 
 @media only screen and (max-width: 850px) {
   .projects {
-    margin: 5rem 5rem 0 5rem;
+    margin: 5rem 2rem 0 2rem;
 
     .all-projects {
       display: flex;

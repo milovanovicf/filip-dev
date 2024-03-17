@@ -37,7 +37,7 @@ export default {
   z-index: 99;
 
   .logo {
-    width: 13rem;
+    width: 5rem;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -46,6 +46,7 @@ export default {
 
     img {
       width: 100%;
+      height: 100%;
     }
   }
 }

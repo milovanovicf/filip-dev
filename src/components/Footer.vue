@@ -33,11 +33,13 @@
 
 <style lang="scss" scoped>
 .footer {
-  height: 15rem;
-  margin: 10rem 15rem 0 15rem;
   color: #fff;
   display: flex;
   justify-content: space-between;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
 
   .title {
     font-size: 1.5rem;
@@ -49,6 +51,11 @@
     font-size: 2rem;
     text-decoration: none;
     color: #fff;
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+      color: #d16f54;
+    }
   }
 
   p {
@@ -57,12 +64,6 @@
 
   li {
     padding-bottom: 0.3rem;
-  }
-}
-
-@media only screen and (max-width: 1200px) {
-  .footer {
-    margin: 10rem 10rem 0 10rem;
   }
 }
 
@@ -81,20 +82,13 @@
 @media only screen and (max-width: 850px) {
   .footer {
     flex-direction: column;
-    margin: 5rem 5rem 0 5rem;
-    height: auto;
+    position: relative;
 
     .rights,
     .email,
     .location,
     .socials {
       padding-bottom: 2rem;
-    }
-  }
-
-  @media only screen and (max-width: 1200px) {
-    .footer {
-      margin: 5rem 2rem 0 2rem;
     }
   }
 }
