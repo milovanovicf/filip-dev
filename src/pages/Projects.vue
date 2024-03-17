@@ -28,47 +28,53 @@ export default {
 
 <style lang="scss" scoped>
 .projects {
+  margin: 0 15rem 0 15rem;
+  position: relative;
+  height: 80%;
+
   .all-projects {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 5rem;
-    margin: 5rem 20rem 0 20rem;
-    padding-bottom: 5rem;
-  }
-}
+    grid-auto-flow: column;
+    grid-auto-columns: 32.5%;
+    gap: 2rem;
+    overflow-x: auto;
+    overscroll-behavior-inline: contain;
+    scroll-snap-type: inline mandatory;
 
-@media only screen and (max-width: 1500px) {
-  .projects {
-    .all-projects {
-      margin: 5rem 15rem 0 15rem;
+    .project {
+      min-width: calc(100% / 3);
+      scroll-snap-align: start;
     }
   }
 }
 
-@media only screen and (max-width: 1200px) {
+::-webkit-scrollbar {
+  background: #ddd;
+  border: 1px solid #ccc;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #aaa;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(131, 131, 131);
+}
+
+@media only screen and (max-width: 1600px) {
   .projects {
-    .all-projects {
-      margin: 5rem 10rem 0 10rem;
-    }
+    margin: 0 10rem 0 10rem;
   }
 }
 
 @media only screen and (max-width: 850px) {
   .projects {
+    margin: 5rem 5rem 0 5rem;
+
     .all-projects {
-      margin: 5rem 5rem 0 5rem;
       display: flex;
       flex-direction: column;
-      padding-bottom: 5rem;
-    }
-  }
-}
-
-@media only screen and (max-width: 550px) {
-  .projects {
-    .all-projects {
-      margin: 5rem 2rem 0rem 2rem;
-      grid-gap: 5rem;
+      margin-bottom: 10rem;
     }
   }
 }

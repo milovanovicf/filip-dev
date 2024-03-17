@@ -1,6 +1,12 @@
 <template>
-  <div class="bg" :class="{ whenProjects: isProjects }">
-    <Loader v-if="!isProjects" />
+  <div
+    class="bg"
+    :class="{
+      whenProjects: isProjects,
+      whenProject: isProject,
+    }"
+  >
+    <Loader v-if="!isProject" />
     <Navbar />
     <router-view></router-view>
   </div>
@@ -14,6 +20,7 @@ export default {
   data() {
     return {
       isProjects: false,
+      isProject: false,
     };
   },
   watch: {
@@ -21,6 +28,10 @@ export default {
       route.path.includes('/projects')
         ? (this.isProjects = true)
         : (this.isProjects = false);
+
+      route.path.includes('/projects/')
+        ? (this.isProject = true)
+        : (this.isProject = false);
     },
   },
 };
@@ -182,8 +193,11 @@ html {
 }
 
 .whenProjects {
-  overflow: visible;
   background: #122c2b;
+}
+
+.whenProject {
+  overflow: visible;
   height: auto;
 }
 
@@ -204,7 +218,7 @@ html {
   .whenProjects {
     overflow: visible;
     background: #1f3d3c;
-    height: auto;
+    height: auto !important;
   }
 }
 </style>
