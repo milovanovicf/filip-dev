@@ -53,7 +53,7 @@
 .about {
   display: flex;
   flex-direction: column;
-  margin: 0 10rem;
+  margin: 0 15rem;
   background-color: #2a4b49;
 
   h1 {

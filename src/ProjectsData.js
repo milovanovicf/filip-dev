@@ -1,6 +1,35 @@
 const projectsData = [
   {
     id: 1,
+    name: 'The Leadway',
+    slug: 'theleadway',
+    overview: 'Maximize your business’s impact with their specialized services',
+    goals:
+      'Provide innovative, tailored, and effective digital strategies to companies worldwide, enabling them to achieve sustainable growth and success in a competitive market.',
+    thumbnail: new URL(
+      `/src/assets/images/theLeadway/preview.png`,
+      import.meta.url
+    ),
+    platform: 'Desktop',
+    link: 'https://theleadway.org/',
+    technologies: ['Wordpress', 'Figma', 'Photoshop'],
+    mainImage: new URL(
+      `/src/assets/images/theLeadway/landingPage.png`,
+      import.meta.url
+    ),
+    overviewImage: new URL(
+      `/src/assets/images/theLeadway/Overview.png`,
+      import.meta.url
+    ),
+    nextProject: new URL(
+      `/src/assets/images/theLeadway/nextProject.png`,
+      import.meta.url
+    ),
+    colors: ['#222831', '#f1c232', '#f2f2f2'],
+    fonts: ['Helvetica'],
+  },
+  {
+    id: 2,
     name: 'Chatter',
     slug: 'chatter',
     overview:
@@ -41,7 +70,7 @@ const projectsData = [
     fonts: ['Lobster', 'Quicksand'],
   },
   {
-    id: 2,
+    id: 3,
     name: 'Learn English Bre!',
     slug: 'learnenglishbre',
     overview:
@@ -71,7 +100,7 @@ const projectsData = [
     fonts: ['Raleway', 'Rock Salt'],
   },
   {
-    id: 3,
+    id: 4,
     name: 'Steamy Savings',
     slug: 'steamysavings',
     overview:

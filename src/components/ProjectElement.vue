@@ -2,7 +2,6 @@
   <div class="project">
     <router-link :to="projectLink">
       <img :src="projectContent.thumbnail" alt="project" />
-      <h3>{{ projectContent.name }}</h3>
     </router-link>
   </div>
 </template>

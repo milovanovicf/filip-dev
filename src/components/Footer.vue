@@ -5,8 +5,8 @@
     </div>
     <div class="email">
       <p class="title">Email</p>
-      <a href="mailto:filip.milovanovic.dev@gmail.com"
-        >filip.milovanovic.dev@gmail.com</a
+      <a href="mailto:milovanovicfilip007@gmail.com"
+        >milovanovicfilip007@gmail.com</a
       >
     </div>
     <div class="location">

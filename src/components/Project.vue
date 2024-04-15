@@ -174,7 +174,7 @@ export default {
 @media only screen and (max-width: 900px) {
   .project {
     &__overview {
-      width: 90%;
+      width: 100%;
       align-items: center;
       .img-container {
         width: 60%;
@@ -204,12 +204,11 @@ export default {
 @media only screen and (max-width: 650px) {
   .project {
     &__overview {
-      width: 100%;
       flex-direction: column-reverse;
       align-items: center;
 
       .img-container {
-        width: 100%;
+        width: 90%;
       }
       .description {
         width: 90%;

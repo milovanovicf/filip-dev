@@ -1,5 +1,6 @@
 <template>
   <div class="projects">
+    <h3>Let My Work Speak For Itself</h3>
     <div class="all-projects">
       <ProjectElement
         v-for="project in projects"
@@ -28,23 +29,20 @@ export default {
 
 <style lang="scss" scoped>
 .projects {
+  h3 {
+    color: #fff;
+    font-size: 5rem;
+    margin: 3rem 0;
+  }
   margin: 0 15rem 0 15rem;
   position: relative;
-  height: 80%;
+  // height: 80%;
 
   .all-projects {
     display: grid;
-    grid-auto-flow: column;
-    grid-auto-columns: 32.5%;
-    gap: 2rem;
-    overflow-x: auto;
-    overscroll-behavior-inline: contain;
-    scroll-snap-type: inline mandatory;
-
-    .project {
-      min-width: calc(100% / 3);
-      scroll-snap-align: start;
-    }
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    padding-bottom: 15rem;
   }
 }
 

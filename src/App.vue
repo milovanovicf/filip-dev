@@ -194,11 +194,7 @@ html {
 
 .whenProjects {
   background: #122c2b;
-}
-
-.whenProject {
-  overflow: visible;
-  height: auto;
+  overflow: auto;
 }
 
 @media only screen and (min-width: 2560px) {
@@ -210,7 +206,9 @@ html {
 @media only screen and (max-width: 1400px) {
   .bg {
     height: 100%;
-    background-image: url('assets/images/Backgroundv4_1_flipped.jpg');
+    background: #1f3d3c;
+
+    /* background-image: url('assets/images/Backgroundv4_1_flipped.jpg'); */
   }
 }
 
