@@ -101,10 +101,10 @@ const projectsData = [
   },
   {
     id: 4,
-    name: 'Steamy Savings',
+    name: 'Gaming Bargain',
     slug: 'steamysavings',
     overview:
-      'Steamy Savings is all about finding the best prices on digital game downloads for PC',
+      'Gaming Bargain is all about finding the best prices on digital game downloads for PC',
     goals: 'Easy way to find best deals of your favourite PC game.',
     thumbnail: new URL(
       `/src/assets/images/steamySavings/Preview.png`,

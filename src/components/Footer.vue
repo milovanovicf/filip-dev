@@ -1,7 +1,10 @@
 <template>
   <div class="footer">
     <div class="rights">
-      <p>© 2023 Filip Milovanovic <br />All rights reserved.</p>
+      <p>
+        {{ `© ${new Date().getFullYear()} Filip Milovanovic` }} <br />All rights
+        reserved.
+      </p>
     </div>
     <div class="email">
       <p class="title">Email</p>

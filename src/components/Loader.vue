@@ -32,7 +32,7 @@ export default {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   z-index: 99;
 
@@ -54,6 +54,7 @@ export default {
 .loaded {
   opacity: 0;
   height: 1vh;
+  width: 100%;
   transition: all 400ms;
 }
 

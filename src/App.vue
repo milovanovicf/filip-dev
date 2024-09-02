@@ -25,13 +25,8 @@ export default {
   },
   watch: {
     $route(route) {
-      route.path.includes('/projects')
-        ? (this.isProjects = true)
-        : (this.isProjects = false);
-
-      route.path.includes('/projects/')
-        ? (this.isProject = true)
-        : (this.isProject = false);
+      this.isProjects = route.path.includes('/projects');
+      this.isProject = route.path.includes('/projects/');
     },
   },
 };
@@ -194,7 +189,8 @@ html {
 
 .whenProjects {
   background: #122c2b;
-  overflow: auto;
+  overflow: visible;
+  height: auto;
 }
 
 @media only screen and (min-width: 2560px) {
@@ -207,8 +203,6 @@ html {
   .bg {
     height: 100%;
     background: #1f3d3c;
-
-    /* background-image: url('assets/images/Backgroundv4_1_flipped.jpg'); */
   }
 }
 
@@ -223,7 +217,7 @@ html {
   .whenProjects {
     overflow: visible;
     background: #1f3d3c;
-    height: auto !important;
+    height: 100%;
   }
 }
 </style>
