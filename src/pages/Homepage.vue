@@ -53,7 +53,10 @@
         >Let's talk about your website</a
       >
       <p class="button-second-text grid-col-span-2">
-        © 2023 Filip Milovanovic. All rights reserved.
+        {{
+          `© ${new Date().getFullYear()} Filip Milovanovic. All rights
+        reserved.`
+        }}
       </p>
     </div>
   </main>
